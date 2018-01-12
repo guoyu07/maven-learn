@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>maven-learn</groupId>
+    <artifactId>maven-learn</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>maven-web</groupId>
+  <artifactId>maven-web</artifactId>
+  <packaging>war</packaging>
+  <name>maven-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+  
+  <plugins>
+  	<plugin>
+		<groupId>maven-loc-plugin</groupId>
+  		<artifactId>maven-loc-plugin</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<configuration>
+  			
+  		</configuration>
+  		<executions>
+  			<execution>
+  				<id>count</id>
+  				<phase>package</phase>
+  				<goals>
+  					<goal>count</goal>
+  				</goals>
+  				<configuration>
+  					
+  				</configuration>
+  			</execution>
+  			
+  			<execution>
+  				<id>hello</id>
+  				<phase>compile</phase>
+  				<goals>
+  					<goal>hello</goal>
+  				</goals>
+  				
+  				<configuration>
+  				
+  				</configuration>
+  			</execution>
+  		
+  		</executions>
+  	</plugin>
+  
+  </plugins>
+  
+  
+  <resources>
+  	<resource>
+  		<directory>src/main/java/com/config</directory>
+  		<
+  	</resource>
+  </resources>
+  
+  
+  
+    <finalName>maven-web</finalName>
+  </build>
+</project>
